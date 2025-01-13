@@ -33,3 +33,5 @@ export default class Game {
         return this._finish
     }
 }
+
+export type Games = Game[]
