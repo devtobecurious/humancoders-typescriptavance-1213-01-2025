@@ -1,3 +1,4 @@
+import { GetAllResultAsMethod } from "../../../core/apis/custom-types";
 import { GetAllResult } from "../../../core/apis/get-all-result";
 import { Person, PersonsResult } from "./models/person";
 
@@ -12,4 +13,10 @@ export class GetAllPersonInfrastructure implements GetAllPersonResultBis {
     getAll(): Promise<PersonsResult> {
         throw new Error("Method not implemented.");
     }
+}
+
+export type GetAllPersonResultAsMethod = GetAllResultAsMethod<PersonsResult>
+
+export function getAllPersonResult(): Promise<PersonsResult> {
+    throw new Error("Method not implemented.");
 }

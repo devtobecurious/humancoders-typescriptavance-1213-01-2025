@@ -5,3 +5,5 @@ export type ItemsResult<T extends BaseItem> = {
     nb?: number
     results: T[]
 }
+
+export type GetAllResultAsMethod<T> = () => Promise<T>
