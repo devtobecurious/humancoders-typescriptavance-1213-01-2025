@@ -1,12 +1,12 @@
 /**
  * 
  */
-export interface Vip<T> {
+export interface Vip<T extends Pass> {
     accessVip(): void
 
     get pass(): T
 
-    get isReady(): boolean
+    get isReadyToVip(): boolean
 }
 
 export type Pass = {

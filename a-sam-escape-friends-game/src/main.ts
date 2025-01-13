@@ -5,13 +5,19 @@ import './style.css'
 const player = new Player()
 player.beginGame()
 
-function accessToVipPart(person: Vip<Pass>) {
-  console.info('you can go to this part !', person.pass)
-  if(person.pass.code !== '') {
-    person.accessVip()
-  }
-}
-accessToVipPart(player)
+// const yannick: Vip<Pass> = {
+//   accessVip: () => {},
+//   pass: {code: '21212'},
+//   isReadyToVip: true
+// }
+
+// function accessToVipPart(person: Vip<Pass>) {
+//   console.info('you can go to this part !', person.pass)
+//   if(person.isReadyToVip) {
+//     person.accessVip()
+//   }
+// }
+// accessToVipPart(yannick)
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>

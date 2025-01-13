@@ -19,7 +19,7 @@ export class Player implements Vip<Pass> {
         }
     }
 
-    get isReady(): boolean {
+    get isReadyToVip(): boolean {
         return this.pass.code !== ''
     }
 }
