@@ -9,8 +9,17 @@ export const converterPosition: Record<Direction, Vector2D> = {
     'South': new Vector2D(0, -1),
 }
 
+/**
+ * 
+ */
 export default abstract class Character {
     position = new Vector2D()
+
+    surname: string
+
+    constructor(surname: string) {
+        this.surname = surname
+    }
 
     move(direction: Direction): void {
         //const vector = new Vector2D()
@@ -25,5 +34,13 @@ export default abstract class Character {
         const nextVector = converterPosition[direction]
         this.position.x += nextVector.x
         this.position.y += nextVector.y
+
+        this.doUpdatePosition(direction)
     }
+
+    /**
+     * demande une mise à jour de la position, suivant les cas décidés par l'enfant
+     * @param direction 
+     */
+    protected abstract doUpdatePosition(direction: Direction): void 
 }
