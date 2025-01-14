@@ -1,4 +1,4 @@
-import { MainCharacterDisplayer } from "../domains/game/displayers/main-character.displayer";
+import { Displayer } from "../core/displayers/displayer";
 import MainCharacter from "../domains/game/models/main-character";
 import { MainCharacterDisplayerInfra } from "../infras/game/main-character.displayer";
 
@@ -21,7 +21,8 @@ describe('main-character', () => {
         `
 
         // bien penser à setter les valeurs pour chaque test
-        const toBeMockable: MainCharacterDisplayer = new MainCharacterDisplayerInfra()
+        const toBeMockable: Displayer<MainCharacter> = new MainCharacterDisplayerInfra()
+
         character = new MainCharacter('sam', 15, toBeMockable)
         character.init()
     })

@@ -1,4 +1,4 @@
-import { MainCharacterDisplayer } from "../displayers/main-character.displayer"
+import { Displayer } from "../../../core/displayers/displayer"
 import Character, { converterPosition } from "./character"
 import { Direction } from "./custom-types"
 
@@ -6,7 +6,7 @@ import { Direction } from "./custom-types"
 export default class MainCharacter extends Character {
     constructor(surname: string, 
                 private nbLunch: number, 
-                private displayer: MainCharacterDisplayer) {
+                private displayer: Displayer<MainCharacter>) {
         super(surname)
         if (this.nbLunch < 0) {
             this.nbLunch = 8
