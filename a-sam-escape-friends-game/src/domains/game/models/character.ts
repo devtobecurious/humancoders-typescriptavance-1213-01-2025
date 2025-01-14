@@ -15,6 +15,7 @@ export const converterPosition: Record<Direction, Vector2D> = {
 export default abstract class Character {
     position = new Vector2D()
 
+    // @required()
     surname: string
 
     constructor(surname: string) {
