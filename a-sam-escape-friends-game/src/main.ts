@@ -1,7 +1,5 @@
 import { Player } from './domains/game/models/player'
-import { Pass, Vip } from './domains/game/models/vip'
-import GetAllPeopleBusiness from './domains/game/services/get-all-people.business'
-import { GetAllPersonInfrastructure, GetAllPersonResultAsMethod } from './domains/game/services/get-all-person.infrastructure'
+import { GetAllPersonResultAsMethod } from './domains/game/services/get-all-person.infrastructure'
 import { PersonsResult } from './domains/game/services/models/person'
 import './style.css'
 
@@ -24,6 +22,7 @@ import './style.css'
 //   }
 // })
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const methodToApi: GetAllPersonResultAsMethod = () => {
        return new Promise<PersonsResult>(resolve => {
                   setTimeout(() => {
@@ -38,7 +37,7 @@ const methodToApi: GetAllPersonResultAsMethod = () => {
               })
     }
   
-const peopleBusiness = new GetAllPeopleBusiness(methodToApi);
+// const peopleBusiness = new GetAllPeopleBusiness(methodToApi);
 
 // const yannick: Vip<Pass> = {
 //   accessVip: () => {},
