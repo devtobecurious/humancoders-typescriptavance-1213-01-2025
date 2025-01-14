@@ -1,4 +1,6 @@
+import { MainCharacterDisplayer } from "../domains/game/displayers/main-character.displayer";
 import MainCharacter from "../domains/game/models/main-character";
+import { MainCharacterDisplayerInfra } from "../infras/game/main-character.displayer";
 
 describe('main-character', () => {
     // N tests unitaires
@@ -19,7 +21,8 @@ describe('main-character', () => {
         `
 
         // bien penser à setter les valeurs pour chaque test
-        character = new MainCharacter('sam', 15)
+        const toBeMockable: MainCharacterDisplayer = new MainCharacterDisplayerInfra()
+        character = new MainCharacter('sam', 15, toBeMockable)
         character.init()
     })
 
