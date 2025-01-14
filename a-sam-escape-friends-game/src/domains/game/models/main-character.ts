@@ -1,3 +1,4 @@
+import { log } from "../../../core/decorators/logger"
 import { Displayer } from "../../../core/displayers/displayer"
 import Character, { converterPosition } from "./character"
 import { Direction } from "./custom-types"
@@ -14,10 +15,12 @@ export default class MainCharacter extends Character {
 
     }
     
+    @log('development')
     init(): void {
         this.displayer.init(this)
     }    
 
+    @log('production', 'warning')
     move(direction: Direction): void {
         super.move(direction)
         this.displayer.update()
