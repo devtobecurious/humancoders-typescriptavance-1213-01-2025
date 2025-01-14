@@ -23,6 +23,10 @@ describe('main-character', () => {
         // bien penser à setter les valeurs pour chaque test
         const toBeMockable: Displayer<MainCharacter> = new MainCharacterDisplayerInfra()
 
+        jest.spyOn(toBeMockable, 'update').mockImplementation(() => {
+            console.info('Execute §?§??§')
+        })
+
         character = new MainCharacter('sam', 15, toBeMockable)
         character.init()
     })

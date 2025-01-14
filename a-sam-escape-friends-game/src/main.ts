@@ -65,6 +65,14 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 const player = new Player()
 player.beginGame()
 
+// const potion = new Potion<unknown>(1, '50+', 50)
+// potion.data = 1
+
+// const shield = new Shield<unknown>(1, 125)
+// potion.data = 1
+// potion.data = { effect: 'whole' }
+// potion.data = { nbTimes: 10 }
+
 // const direction : Direction = Direction.East
 // if(direction == Direction.East) {
 
