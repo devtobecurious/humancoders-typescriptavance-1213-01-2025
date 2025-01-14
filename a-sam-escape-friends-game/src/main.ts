@@ -5,8 +5,7 @@ import { GetAllPersonInfrastructure, GetAllPersonResultAsMethod } from './domain
 import { PersonsResult } from './domains/game/services/models/person'
 import './style.css'
 
-const player = new Player()
-player.beginGame()
+
 
  // const peopleBusiness = new GetAllPeopleBusiness(new GetAllPersonInfrastructure())
 // const peopleBusiness = new GetAllPeopleBusiness({
@@ -57,12 +56,15 @@ const peopleBusiness = new GetAllPeopleBusiness(methodToApi);
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
-    <div class="game-container">
+    <div id="game-container">
       <div class="main-character">
       </div>
     </div>
   </div>
 `
+
+const player = new Player()
+player.beginGame()
 
 // const direction : Direction = Direction.East
 // if(direction == Direction.East) {

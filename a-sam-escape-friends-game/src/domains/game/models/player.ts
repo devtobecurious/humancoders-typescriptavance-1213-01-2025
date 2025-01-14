@@ -7,6 +7,8 @@ export class Player implements Vip<Pass> {
     beginGame(): void {
         const game = new Game(new Date())
         this.games.push(game)
+
+        game.start()
     }
 
     accessVip(): void {

@@ -5,8 +5,8 @@ import Vector2D from "./vector-2d"
 export const converterPosition: Record<Direction, Vector2D> = {
     'East': new Vector2D(1, 0),
     'West': new Vector2D(-1, 0),
-    'North': new Vector2D(0, 1),
-    'South': new Vector2D(0, -1),
+    'North': new Vector2D(0, -1),
+    'South': new Vector2D(0, 1),
 }
 
 /**

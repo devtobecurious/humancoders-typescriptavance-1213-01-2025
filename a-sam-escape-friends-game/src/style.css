@@ -105,13 +105,15 @@ button:focus-visible {
   border: 2px solid black;
   background-color: white;
 }
+
 .main-character {
-  width: 32px; 
-  height: 32px; 
+  width: 50px; 
+  height: 50px; 
   background-image: url('imgs/zelda.png');
   background-size: auto; 
   background-position: 0 0; 
   background-repeat: no-repeat;
   grid-column: 1;
   grid-row: 1;
+  display: block;
 }

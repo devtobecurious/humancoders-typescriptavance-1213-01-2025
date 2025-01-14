@@ -7,6 +7,8 @@ import MainCharacter from "./main-character"
  */
 export default class Game {
     private _finish = false
+    private mainCharacter : MainCharacter | undefined
+
     private characters: Character[] = [
         new MainCharacter('Sam', 10),
         new Enemy('Orq 01'),
@@ -16,7 +18,14 @@ export default class Game {
     constructor(private _beginDate: Date) {}
 
     start(): void {
-        this.characters.forEach(item => item.move('East'))
+        //this.characters.forEach(item => item.move('East'))
+        this.mainCharacter = this.characters.find(item => item instanceof MainCharacter)
+
+        if(! this.mainCharacter) {
+            throw new Error('Main character not found')
+        }
+
+        this.mainCharacter.init()
     }
 
     /**
